@@ -1,11 +1,38 @@
 #global--menu-button {
   margin-left: auto;
   margin-right: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+
+  @include mediaQuery-up(sm) {
+    padding: 4rem;
+  }
+}
+
+.menu--item {
+  margin-bottom: 1.5rem;
+
+  @include mediaQuery-up(sm) {
+    margin-bottom: 4rem;
+  }
+
+  .arial-black {
+    font-size: 1.75rem;
+
+    @include mediaQuery-up(sm) {
+      font-size: 2.25rem;
+    }
+  }
 }
 
 .menu-hover {
   @include hover-underline("slide", "left-in-right", 4px, $yellow);
 
   font-family: "Marker Felt", sans-serif;
-  font-size: 200%;
+  font-size: 160%;
+
+  @include mediaQuery-up(sm) {
+    font-size: 200%;
+  }
 }

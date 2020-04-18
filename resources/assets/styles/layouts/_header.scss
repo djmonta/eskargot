@@ -2,13 +2,23 @@
 // TODO: .banner .nav a {}
 .banner {
   background: $brand-primary;
+  height: 100vh;
+
+  @include mediaQuery-up(sm) {
+    height: auto;
+  }
 
   .bg-container {
     background: image("banner_bg.png") no-repeat $brand-primary;
     width: 100%;
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
     height: 50vh;
+    top: 3rem;
+
+    @include mediaQuery-up(sm) {
+      top: 0;
+    }
   }
 
   &.menu-open {
@@ -18,5 +28,30 @@
     left: 0;
     width: 100%;
     height: 100vh;
+    z-index: 1;
+  }
+
+  .header--image-space {
+    height: 19vh;
+
+    @include mediaQuery-up(sm) {
+      height: 16rem;
+    }
+  }
+
+  .header--image-wrap {
+    height: 33vh;
+
+    @include mediaQuery-up(sm) {
+      height: auto;
+    }
+
+    img {
+      width: 95%;
+
+      @include mediaQuery-up(sm) {
+        width: 100%;
+      }
+    }
   }
 }
