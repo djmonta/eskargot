@@ -34,7 +34,7 @@
     }
 
     @if $type == "slide" {
-      bottom: $weight * -2;
+      bottom: $weight;
       transform: scale(0, 1);
       transition: transform 0.3s;
 

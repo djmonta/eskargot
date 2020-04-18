@@ -7,8 +7,8 @@
       @endif
     </nav> -->
   </div>
-  <div class="cover vh-100 tc bg-light-red">
-    <div class="bg-red h-50"></div>
+  <div class="cover vh-100 tc">
+    <div class="h-50"></div>
     <nav class="dt w-100 mw8 center v-mid">
       <div class="dtc w-50 v-mid pa3">
         <a href="{{ home_url('/') }}" class="dib w2 h2 pa1 ba b--white-90 grow-large border-box">
@@ -16,10 +16,21 @@
         </a>
       </div>
       <div class="dtc v-mid tr pa3">
-        <a class="menu-hover no-underline white-70 dn db mv3 ph3" href="/" >How it Works</a>
-        <a class="menu-hover no-underline white-70 dn db mv3 ph3" href="/" >Pricing</a>
-        <a class="menu-hover no-underline white-70 dn db mv3 ph3" href="/" >About</a>
-        <a class="menu-hover no-underline white-70 dn db mv3 ph3" href="/" >Careers</a>
+        <div class="dn db mv3">
+          <a class="menu-hover no-underline white dib pl3" href="/" >NEWS</a>
+        </div>
+        <div class="dn db mv3">
+          <a class="menu-hover no-underline white dib pl3" href="/" >LIVE INFO</a>
+        </div>
+        <div class="dn db mv3">
+          <a class="menu-hover no-underline white dib pl3" href="/" >BIOGRAPHY</a>
+        </div>
+        <div class="dn db mv3">
+          <a class="menu-hover no-underline white dib pl3" href="/" >DISCOGRAPHY</a>
+        </div>
+        <div class="dn db mv3">
+          <a class="menu-hover no-underline white dib pl3" href="/" >MOVIE</a>
+        </div>
         <!-- <a class="f6 fw4 hover-white menu-hover no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a> -->
       </div>
     </nav>

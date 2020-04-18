@@ -1,3 +1,6 @@
 .menu-hover {
   @include hover-underline("slide", "left-in-right", 4px, $gold);
+
+  font-family: "Marker Felt", sans-serif;
+  font-size: 200%;
 }
