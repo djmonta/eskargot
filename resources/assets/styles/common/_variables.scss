@@ -1,5 +1,43 @@
+$asset-base-path: "/wp-content/themes/eskargot/dist" !default;
+
+/// Asset URL builder
+/// @access private
+/// @param {String} $type - Asset type, matching folder name
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the asset
+@function asset($type, $file) {
+  @return url($asset-base-path + "/" + $type + "/" + $file);
+}
+
+/// Image asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the image
+/// @require {function} asset
+@function image($file) {
+  @return asset("images", $file);
+}
+
+/// Font asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the font
+/// @require {function} asset
+@function font($file) {
+  @return asset("fonts", $file);
+}
+
 /** Colors */
 $brand-primary:         #f3564e;
 
 /** Box Model  */
 $spacer:                2rem;
+
+/** Hamburger icon */
+$hamburger-padding-x: 0;
+$hamburger-padding-y: 0;
+$hamburger-layer-width: 40px;
+$hamburger-layer-height: 2px;
+$hamburger-layer-spacing: 10px;
+$hamburger-layer-color: #fff;
+$hamburger-types: (squeeze);
