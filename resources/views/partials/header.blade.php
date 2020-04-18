@@ -48,32 +48,32 @@
           <!-- <a class="f6 fw4 hover-white menu-hover no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a> -->
         </div>
     </div>
-    <div class="header--content vh-50-ns tc">
+    <div class="header--content tc">
       <div class="header--image-space">
 
       </div>
       <nav class="flex flex-column flex-row-ns flex-wrap-m items-center w-100 mw8 center v-mid">
-        <div class="header--image-wrap w-70-l pl6-l">
+        <div class="header--image-wrap">
           <!-- <a href="{{ home_url('/') }}" class="dib w2 h2 pa1 ba b--white-90 grow-large border-box"> -->
             <!-- <svg class="link white-90 hover-white" data-icon="skull" viewBox="0 0 32 32" style="fill:currentcolor"><title>skull icon</title><path d="M16 0 C6 0 2 4 2 14 L2 22 L6 24 L6 30 L26 30 L26 24 L30 22 L30 14 C30 4 26 0 16 0 M9 12 A4.5 4.5 0 0 1 9 21 A4.5 4.5 0 0 1 9 12 M23 12 A4.5 4.5 0 0 1 23 21 A4.5 4.5 0 0 1 23 12"></path></svg> -->
             <img src="@asset('images/top_member.png')" alt="">
           <!-- </a> -->
         </div>
-        <div class="w-100 w-30-l tr ph2-l ph4">
-          <div class="dn db mv3">
-            <a class="menu-hover no-underline white dib pl3" href="/" >NEWS</a>
+        <div class="header--menu w-100 w-30-l tr">
+          <div>
+            <a class="menu-hover no-underline white dib" href="/" >NEWS</a>
           </div>
-          <div class="dn db mv3">
-            <a class="menu-hover no-underline white dib pl3" href="/" >LIVE INFO</a>
+          <div>
+            <a class="menu-hover no-underline white dib" href="/" >LIVE INFO</a>
           </div>
-          <div class="dn db mv3">
-            <a class="menu-hover no-underline white dib pl3" href="/" >BIOGRAPHY</a>
+          <div>
+            <a class="menu-hover no-underline white dib" href="/" >BIOGRAPHY</a>
           </div>
-          <div class="dn db mv3">
-            <a class="menu-hover no-underline white dib pl3" href="/" >DISCOGRAPHY</a>
+          <div>
+            <a class="menu-hover no-underline white dib" href="/" >DISCOGRAPHY</a>
           </div>
-          <div class="dn db mv3">
-            <a class="menu-hover no-underline white dib pl3" href="/" >MOVIE</a>
+          <div>
+            <a class="menu-hover no-underline white dib" href="/" >MOVIE</a>
           </div>
           <!-- <a class="f6 fw4 hover-white menu-hover no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a> -->
         </div>

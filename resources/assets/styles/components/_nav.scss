@@ -27,12 +27,14 @@
 }
 
 .menu-hover {
-  @include hover-underline("slide", "left-in-right", 4px, $yellow);
+  @include hover-underline("slide", "left-in-right", 4px, #e2dc60);
 
   font-family: "Marker Felt", sans-serif;
   font-size: 160%;
+  padding-left: 1rem;
+  opacity: 0.9;
 
   @include mediaQuery-up(sm) {
-    font-size: 200%;
+    font-size: 170%;
   }
 }

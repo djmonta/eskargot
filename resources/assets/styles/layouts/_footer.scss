@@ -1,0 +1,46 @@
+footer {
+  background: $brand-primary;
+
+  .footer--logo {
+    margin: 0 auto;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+  }
+
+  .container {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .menu-footer-container {
+    .menu {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      padding-left: 0;
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+      margin: 0;
+      justify-content: space-around;
+
+      .menu-item {
+        display: block;
+        flex-basis: 10%;
+        text-align: center;
+
+        a {
+          color: white;
+          opacity: 0.7;
+          font-family: "Arial Black", sans-serif;
+          text-decoration: none;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
