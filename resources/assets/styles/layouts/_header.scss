@@ -14,6 +14,7 @@
     max-width: 1200px;
     margin: 0 auto;
     height: 50vh;
+    min-height: 620px;
     top: 3rem;
 
     @include mediaQuery-up(sm) {
@@ -31,12 +32,16 @@
     z-index: 1;
   }
 
+  .header--content {
+    min-height: 600px;
+  }
+
   .header--image-space {
     height: 19vh;
 
-    @include mediaQuery-up(sm) {
-      height: 16rem;
-    }
+    // @include mediaQuery-up(sm) {
+    //   height: 16rem;
+    // }
   }
 
   .header--image-wrap {
