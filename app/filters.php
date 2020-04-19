@@ -89,3 +89,8 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+add_filter('get_the_date', function($d) {
+    $d = date('Y.n.j');
+    return $d;
+});
