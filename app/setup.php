@@ -130,3 +130,49 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+add_action('after_setup_theme', function() {
+
+    // create categories
+    if (file_exists (ABSPATH.'/wp-admin/includes/taxonomy.php'))
+    {
+        require_once (ABSPATH.'/wp-admin/includes/taxonomy.php');
+
+        $categories = [
+            'News',
+            'Live',
+            'Blog',
+        ];
+
+        foreach ($categories as $key => $value) {
+            // create categories
+            $check = get_cat_ID($value);
+            if(empty($check)) {
+                wp_create_category($value);
+            }
+        }
+    }
+
+    // create pages
+    $new_page_titles = [
+        'Contact',
+        'Biography'
+    ];
+
+    foreach ($new_page_titles as $title) {
+        $page_check = get_page_by_title($title);
+        if(!isset($page_check->ID)) {
+            $new_page = array(
+            'post_type'     => 'page',
+            'post_title'    => $title,
+            'post_content'  => 'more coming soon',
+            'post_status'   => 'publish',
+            'post_author'   => 1,
+            'post_parent'   => '', );
+
+            $new_page_id = wp_insert_post($new_page);                   // create page
+        }
+    }
+
+
+});
