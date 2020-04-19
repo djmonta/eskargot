@@ -21,12 +21,12 @@
             <img src="@asset('images/logo_w.png')" alt="" class="o-70 w-90 w-100-ns">
           </div>
           <div class="menu--item">
-            <a class="hover-white no-underline white-70" href="/" >
+            <a class="hover-white no-underline white-70" href="/news" >
               <span class="arial-black f2 fw4">NEWS</span><br>お知らせ一覧
             </a>
           </div>
           <div class="menu--item">
-            <a class="hover-white no-underline white-70" href="/" >
+            <a class="hover-white no-underline white-70" href="/blog" >
               <span class="arial-black f2 fw4">BLOG</span><br>ブログ
             </a>
           </div>
@@ -36,7 +36,7 @@
             </a>
           </div>
           <div class="menu--item">
-            <a class="hover-white no-underline white-70" href="/" >
+            <a class="hover-white no-underline white-70" href="/contact" >
               <span class="arial-black f2 fw4">CONTACT</span><br>お問い合わせ
             </a>
           </div>
