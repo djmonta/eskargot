@@ -91,7 +91,7 @@ add_filter('comments_template', function ($comments_template) {
 }, 100);
 
 add_filter('get_the_date', function($d) {
-    $d = date('Y.n.j');
+    $d = date('Y.n.j', strtotime( get_post_time('Y-m-d') ));
     return $d;
 });
 
