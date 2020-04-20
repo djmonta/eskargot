@@ -94,3 +94,23 @@ add_filter('get_the_date', function($d) {
     $d = date('Y.n.j');
     return $d;
 });
+
+add_filter( 'get_the_archive_title', function ($title) {
+    if ( is_post_type_archive() ) {
+        $title = post_type_archive_title( '', false );
+    } elseif (  is_category() ) {
+        $title = single_cat_title( '', false );
+    } elseif ( is_tag() ) {
+        $title = single_tag_title( '', false );
+    } elseif ( is_author() ) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    }
+
+    return $title;
+});
+
+// pre_get_postsにフック
+add_action( 'pre_get_posts', function($query) {
+    if ( ! is_admin() && $query->is_main_query() && $query->is_home() )
+    $query->set( 'category_name', 'news,live' );
+} );

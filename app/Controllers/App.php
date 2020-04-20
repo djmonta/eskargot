@@ -17,7 +17,7 @@ class App extends Controller
             if ($home = get_option('page_for_posts', true)) {
                 return get_the_title($home);
             }
-            return __('NEWS', 'sage');
+            return __('', 'sage');
         }
         if (is_archive()) {
             return get_the_archive_title();
@@ -29,5 +29,10 @@ class App extends Controller
             return __('Not Found', 'sage');
         }
         return get_the_title();
+    }
+
+    public static function getPostCategorySlug($post_id)
+    {
+        return get_the_category($post_id)[0]->slug;
     }
 }
