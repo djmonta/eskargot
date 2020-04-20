@@ -6,7 +6,7 @@
     @include('partials.header')
     <div class="wrap container" role="document">
       <div class="content">
-        <main class="main pt5 vh-50">
+        <main class="main pt5 min-vh-100">
           @yield('content')
         </main>
         @if (App\display_sidebar())

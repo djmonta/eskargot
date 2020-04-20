@@ -15,7 +15,7 @@
       <h2>{{ strtoupper($category) }}</h2>
     </div>
     <div class="{{ $category }} @if ($category == 'news') slider @endif">
-    @foreach ($posts as $post) @php the_post() @endphp
+    @foreach ($posts as $a_post) @php global $post; $post = $a_post; @endphp
       @include('partials.content-home-' . $category)
     @endforeach
     </div>

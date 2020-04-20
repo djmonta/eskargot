@@ -9,7 +9,7 @@ class FrontPage extends Controller
 
     public static function homePosts()
     {
-        $category_posts = [];
+        $category_posts = ['news' => [], 'live' => []];
         while ( have_posts() ) {
             global $post;
             the_post();
