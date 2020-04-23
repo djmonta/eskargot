@@ -1,0 +1,31 @@
+.wrap {
+  background-size: cover;
+}
+
+.container {
+  background: rgba($color: #fff, $alpha: 0.64);
+
+  h2 {
+    color: $brand-primary;
+
+    &::after {
+      content: "";
+      height: 20px;
+      display: block;
+      background: asset("images", "h2_border.svg") no-repeat;
+      background-size: cover;
+
+      @include mediaQuery-down(lg) {
+        background-size: contain;
+      }
+    }
+  }
+
+  h2 span {
+    display: block;
+    font-size: 0.75rem;
+    letter-spacing: normal;
+    font-weight: normal;
+    font-family: sans-serif;
+  }
+}
