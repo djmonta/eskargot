@@ -19,4 +19,9 @@ class FrontPage extends Controller
 
         return $category_posts;
     }
+
+    public static function categoryDescFromSlug($slug)
+    {
+        return category_description(get_category_by_slug($slug)->term_id);
+    }
 }

@@ -115,3 +115,5 @@ add_action( 'pre_get_posts', function($query) {
         $query->set( 'category_name', 'news,live' );
     }
 } );
+
+remove_filter('term_description','wpautop');
