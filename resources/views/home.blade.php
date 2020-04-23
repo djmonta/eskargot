@@ -5,9 +5,9 @@
   @php $post_collection = FrontPage::homePosts(); @endphp
   @foreach ($post_collection as $category => $posts)
   <div class="wrap wrap--{{ $category }} pv5">
-  <div class="container br4 ph2 pv5">
+  <div class="container br4 ph5 pv4">
     <div class="page-header mid-gray arial-black tracked-mega tc">
-      <h2>{{ strtoupper($category) }} <span>{{ FrontPage::categoryDescFromSlug($category) }}</span></h2>
+      <h2 class="pv2">{{ strtoupper(get_category_by_slug($category)->name) }} <span class="mv2">{{ category_description(get_category_by_slug($category)->term_id) }}</span></h2>
     </div>
     <div class="{{ $category }} @if ($category == 'news') slider @endif">
     @foreach ($posts as $a_post) @php global $post; $post = $a_post; @endphp
@@ -15,7 +15,7 @@
     @endforeach
     </div>
     <div class="tc pv3">
-      <a href="/{{ $category }}" class="button button--more link dim">More {{ $category }}</a>
+      <a href="/{{ $category }}" class="button button--more link grow">More {{ get_category_by_slug($category)->name }}</a>
     </div>
   </div>
   </div>
