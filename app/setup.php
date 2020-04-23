@@ -141,16 +141,28 @@ add_action( 'init', function() {
         require_once (ABSPATH.'/wp-admin/includes/taxonomy.php');
 
         $categories = [
-            'News',
-            'Live',
-            'Blog',
+            array(
+                'cat_name' => 'News',
+                'category_description' => 'お知らせ',
+                'category_nicename' => 'news'
+            ),
+            array(
+                'cat_name' => 'Live Info',
+                'category_description' => 'Live 情報',
+                'category_nicename' => 'live'
+            ),
+            array(
+                'cat_name' => 'Blog',
+                'category_description' => 'ブログ',
+                'category_nicename' => 'blog'
+            )
         ];
 
         foreach ($categories as $value) {
             // create categories
-            $check = get_cat_ID($value);
+            $check = get_cat_ID($value['cat_name']);
             if(empty($check)) {
-                wp_create_category($value);
+                wp_insert_category($value);
             }
         }
     }
