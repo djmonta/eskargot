@@ -309,3 +309,89 @@ add_action( 'init', function() {
         }
     }
 });
+
+add_action( 'init', function () {
+    acf_add_local_field_group(array(
+        'key' => 'group_5ea1e6fcea02a',
+        'title' => 'Live Info',
+        'fields' => array(
+            array(
+                'key' => 'field_5ea1e70c9777e',
+                'label' => '日付',
+                'name' => 'live_date',
+                'type' => 'date_picker',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'display_format' => 'Y/m/d',
+                'return_format' => 'Y.n.j',
+                'first_day' => 1,
+            ),
+            array(
+                'key' => 'field_5ea1e72a9777f',
+                'label' => '場所',
+                'name' => 'live_at',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => '場所',
+                'prepend' => '@',
+                'append' => '',
+                'maxlength' => '',
+            ),
+            array(
+                'key' => 'field_5ea1ea0be9d25',
+                'label' => 'トップページに表示する？',
+                'name' => 'show_on_top',
+                'type' => 'true_false',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '',
+                'default_value' => 1,
+                'ui' => 1,
+                'ui_on_text' => '',
+                'ui_off_text' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'post_type',
+                    'operator' => '==',
+                    'value' => 'post',
+                ),
+                array(
+                    'param' => 'post_category',
+                    'operator' => '==',
+                    'value' => 'category:live',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+});
