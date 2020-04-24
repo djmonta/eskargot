@@ -13,9 +13,9 @@
       height: 20px;
       display: block;
       background: asset("images", "h2_border.svg") no-repeat;
-      background-size: cover;
+      background-size: contain;
 
-      @include mediaQuery-down(lg) {
+      @include mediaQuery-up(lg) {
         background-size: contain;
       }
     }

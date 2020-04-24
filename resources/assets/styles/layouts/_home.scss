@@ -3,3 +3,24 @@
   background-position: bottom left;
   // height: 50vh; //仮
 }
+
+.wrap--live {
+  background-image: image("bg_2.jpg");
+  background-position: top left;
+  background-size: cover;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+
+  @include mediaQuery-up(md) {
+    max-width: 80rem;
+  }
+}
+
+.container .mw8,
+.page-header {
+  margin-left: auto;
+  margin-right: auto;
+}

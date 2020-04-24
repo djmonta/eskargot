@@ -1,4 +1,4 @@
-<article @php post_class() @endphp>
+<article @php post_class('ph3') @endphp>
   <header>
     @include('partials/eye-catch')
     @include('partials/entry-meta')

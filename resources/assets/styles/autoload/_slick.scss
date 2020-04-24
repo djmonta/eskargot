@@ -1,2 +1,7 @@
+$slick-font-path: "../fonts/";
+$slick-arrow-color: $brand-primary;
+$slick-dot-color: $brand-with-opacity;
+$slick-dot-color-active: $brand-primary;
+
 @import "~slick-carousel/slick/slick.scss";
 @import "~slick-carousel/slick/slick-theme.scss";
