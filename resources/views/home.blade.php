@@ -34,14 +34,23 @@
         @php global $post; $post = $posts_category; @endphp
         {!! apply_filters('the_content', $post->post_content) !!}
         </div>
-      @else
+      @elseif ($category == 'discography')
         @foreach ($posts_category as $p_coll)
           @foreach ($p_coll as $b_post)
             @php global $post; $post = $b_post; @endphp
               @include('partials.content-home-' . $category)
           @endforeach
         @endforeach
+
+      @else
+        @foreach ($p_coll as $b_post)
+          @php global $post; $post = $b_post; @endphp
+            @include('partials.content-home-' . $category)
+        @endforeach
       @endif
+
+      @php wp_reset_postdata(); @endphp
+
     </div>
   </div>
   </div>
