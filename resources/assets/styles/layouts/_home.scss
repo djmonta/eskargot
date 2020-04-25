@@ -8,6 +8,24 @@
   background-image: image("bg_2.jpg");
   background-position: top left;
   background-size: cover;
+
+  header,
+  h3 a {
+    color: $brand-primary;
+  }
+
+  .entry-title {
+    margin-top: 2rem;
+  }
+
+  .thumbnail {
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    img {
+      display: block;
+    }
+  }
 }
 
 .container {

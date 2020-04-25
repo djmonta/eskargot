@@ -1,4 +1,4 @@
-<header class="banner flex flex-wrap justify-center sans-serif">
+<header class="banner flex flex-wrap justify-center">
   <div class="bg-container absolute contain">
     <!-- <a class="brand" href="{{ home_url('/') }}">{{ get_bloginfo('name', 'display') }}</a> -->
     <!-- <nav class="nav-primary">

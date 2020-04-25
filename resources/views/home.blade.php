@@ -9,12 +9,12 @@
     <div class="page-header mid-gray arial-black tracked-mega tc mw8">
       <h2 class="pv2">{{ strtoupper(get_category_by_slug($category)->name) }} <span class="mv2">{{ category_description(get_category_by_slug($category)->term_id) }}</span></h2>
     </div>
-    <div class="mw8 {{ $category }} @if ($category == 'news') slider @endif">
+    <div class="mw8 {{ $category }} @if ($category == 'news') slider @elseif ($category == 'live') flex @endif">
     @foreach ($posts as $a_post) @php global $post; $post = $a_post; @endphp
       @include('partials.content-home-' . $category)
     @endforeach
     </div>
-    <div class="tc pv3">
+    <div class="tc mt4 pv3">
       <a href="/{{ $category }}" class="button button--more link grow">More {{ get_category_by_slug($category)->name }}</a>
     </div>
   </div>
