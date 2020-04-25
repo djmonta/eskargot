@@ -20,4 +20,32 @@ class FrontPage extends Controller
         return $category_posts;
     }
 
+    public static function homeBioAndMusic()
+    {
+        $args = [
+            'post_type' => array('page', 'music'),
+        ];
+
+        $bio_and_music_query = new \WP_Query( $args );
+
+        $bio_and_music = [];
+        if ( $bio_and_music_query->have_posts() ) {
+            foreach ($bio_and_music_query->get_posts() as $post) {
+                if ($post->post_title == 'Biography') {
+                    $bio_and_music[0] = $post;
+                    continue;
+                }
+                if ($post->post_type == 'music') {
+                    $format = wp_get_post_terms($post->ID, 'format');
+                    $bio_and_music[$format[0]->slug][] = $post;
+                }
+            }
+            ksort($bio_and_music);
+        }
+
+        wp_reset_postdata();
+
+        return $bio_and_music;
+    }
+
 }

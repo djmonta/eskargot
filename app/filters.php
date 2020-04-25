@@ -112,6 +112,7 @@ add_filter( 'get_the_archive_title', function ($title) {
 // pre_get_postsにフック
 add_action( 'pre_get_posts', function($query) {
     if ( ! is_admin() && $query->is_main_query() && $query->is_home() ) {
+        $query->set( 'post_type', 'post');
         $query->set( 'category_name', 'news,live' );
     }
 } );

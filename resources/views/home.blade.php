@@ -21,5 +21,7 @@
   </div>
   @endforeach
 
+  @php $posts_home = FrontPage::homeBioAndMusic(); @endphp
+
   {!! get_the_posts_navigation() !!}
 @endsection
