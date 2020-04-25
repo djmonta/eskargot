@@ -21,7 +21,31 @@
   </div>
   @endforeach
 
-  @php $posts_home = FrontPage::homeBioAndMusic(); @endphp
+  @php $bio_and_music = FrontPage::homeBioAndMusic(); @endphp
+  @foreach ($bio_and_music as $category => $posts_category)
+  <div class="wrap wrap--{{ $category }} pv5">
+  <div class="container br4 ph5 pv4">
+    <div class="page-header">
+      <h2 class="pv2">{{ strtoupper($category) }} <span class="mv2">@if($category == 'biography') 略歴 @elseif ($category == 'discography') 作品 @else 動画 @endif</span></h2>
+    </div>
+    <div class="mv8 {{ $category }} flex">
+      @if ($category == 'biography')
+        <div class="entry-content">
+        @php global $post; $post = $posts_category; @endphp
+        {!! apply_filters('the_content', $post->post_content) !!}
+        </div>
+      @else
+        @foreach ($posts_category as $p_coll)
+          @foreach ($p_coll as $b_post)
+            @php global $post; $post = $b_post; @endphp
+              @include('partials.content-home-' . $category)
+          @endforeach
+        @endforeach
+      @endif
+    </div>
+  </div>
+  </div>
+  @endforeach
 
   {!! get_the_posts_navigation() !!}
 @endsection
