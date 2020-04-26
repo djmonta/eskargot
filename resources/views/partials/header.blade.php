@@ -71,10 +71,10 @@
             <a class="menu-hover no-underline white dib" href="#biography" >BIOGRAPHY</a>
           </div>
           <div>
-            <a class="menu-hover no-underline white dib" href="/" >DISCOGRAPHY</a>
+            <a class="menu-hover no-underline white dib" href="#discography" >DISCOGRAPHY</a>
           </div>
           <div>
-            <a class="menu-hover no-underline white dib" href="/" >MOVIE</a>
+            <a class="menu-hover no-underline white dib" href="#movie" >MOVIE</a>
           </div>
           <!-- <a class="f6 fw4 hover-white menu-hover no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a> -->
         </div>

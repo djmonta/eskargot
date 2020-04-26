@@ -32,7 +32,7 @@
     <div class="page-header">
       <h2 class="pv2">{{ strtoupper($category) }} <span class="mv2">@if($category == 'biography') 略歴 @elseif ($category == 'discography') 作品 @else 動画 @endif</span></h2>
     </div>
-    <div class="section-contents {{ $category }} flex flex-wrap">
+    <div id="{{ $category }}" class="section-contents {{ $category }} flex flex-wrap">
       @if ($category == 'biography')
         @php $wp_query->setup_postdata($posts_category); @endphp
         <article>
