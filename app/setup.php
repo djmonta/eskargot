@@ -172,7 +172,7 @@ add_action( 'init', function() {
             }
         }
     }
-});
+}, 20);
 
 /**
  * Create Pages
@@ -199,7 +199,7 @@ add_action( 'init', function() {
             wp_insert_post($new_page);
         }
     }
-});
+}, 20);
 
 
 /**
@@ -207,82 +207,82 @@ add_action( 'init', function() {
  */
 add_action( 'init', function() {
     $labels = [
-        "name" => __( "Music", "sage" ),
-        "singular_name" => __( "Music", "sage" ),
+        'name' => __( 'Music', 'sage' ),
+        'singular_name' => __( 'Music', 'sage' ),
     ];
 
     $args = [
-        "label" => __( "Music", "sage" ),
-        "labels" => $labels,
-        "description" => "",
-        "public" => true,
-        "publicly_queryable" => true,
-        "show_ui" => true,
-        "show_in_rest" => true,
-        "rest_base" => "",
-        "rest_controller_class" => "WP_REST_Posts_Controller",
-        "has_archive" => false,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "delete_with_user" => false,
-        "exclude_from_search" => false,
-        "capability_type" => "post",
-        "map_meta_cap" => true,
-        "hierarchical" => false,
-        "rewrite" => [ "slug" => "music", "with_front" => true ],
-        "query_var" => true,
-        "menu_icon" => "dashicons-format-audio",
-        "supports" => [ "title", "editor", "thumbnail" ],
+        'label' => __( 'Music', 'sage' ),
+        'labels' => $labels,
+        'description' => '',
+        'public' => true,
+        'publicly_queryable' => true,
+        'show_ui' => true,
+        'show_in_rest' => true,
+        'rest_base' => '',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
+        'has_archive' => false,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'delete_with_user' => false,
+        'exclude_from_search' => false,
+        'capability_type' => "post",
+        'map_meta_cap' => true,
+        'hierarchical' => false,
+        'rewrite' => [ "slug" => 'music', 'with_front' => true ],
+        'query_var' => true,
+        'menu_icon' => 'dashicons-format-audio',
+        'supports' => [ 'title', 'editor', 'thumbnail' ],
     ];
 
-    register_post_type( "music", $args );
-});
+    register_post_type( 'music', $args );
+}, 20);
 
 /**
  * Taxonomy: 形式.
  */
 add_action( 'init', function() {
     $labels = [
-        "name" => __( "形式", "sage" ),
-        "singular_name" => __( "形式", "sage" ),
-        "menu_name" => __( "形式", "sage" ),
-        "all_items" => __( "形式 一覧", "sage" ),
-        "edit_item" => __( "形式 を編集", "sage" ),
-        "view_item" => __( "表示 形式", "sage" ),
-        "update_item" => __( "Update 形式 name", "sage" ),
-        "add_new_item" => __( "新規 形式 を追加", "sage" ),
-        "new_item_name" => __( "新しい 形式 の名前", "sage" ),
-        "parent_item" => __( "親 形式", "sage" ),
-        "parent_item_colon" => __( "親 形式:", "sage" ),
-        "search_items" => __( "形式 を検索", "sage" ),
-        "popular_items" => __( "人気の 形式", "sage" ),
-        "separate_items_with_commas" => __( "形式 が複数ある場合はコンマで区切る", "sage" ),
-        "add_or_remove_items" => __( "形式 を追加または削除", "sage" ),
-        "choose_from_most_used" => __( "最もよく使われている形式から選択", "sage" ),
-        "not_found" => __( "No 形式 found", "sage" ),
-        "no_terms" => __( "No 形式", "sage" ),
-        "items_list_navigation" => __( "形式 list navigation", "sage" ),
-        "items_list" => __( "形式 list", "sage" ),
+        'name' => __( '形式', 'sage' ),
+        'singular_name' => __( '形式', 'sage' ),
+        'menu_name' => __( '形式', 'sage' ),
+        'all_items' => __( '形式 一覧', 'sage' ),
+        'edit_item' => __( '形式 を編集', 'sage' ),
+        'view_item' => __( '表示 形式', 'sage' ),
+        'update_item' => __( 'Update 形式 name', 'sage' ),
+        'add_new_item' => __( '新規 形式 を追加', 'sage' ),
+        'new_item_name' => __( '新しい 形式 の名前', 'sage' ),
+        'parent_item' => __( '親 形式', 'sage' ),
+        'parent_item_colon' => __( '親 形式:', 'sage' ),
+        'search_items' => __( '形式 を検索', 'sage' ),
+        'popular_items' => __( '人気の 形式', 'sage' ),
+        'separate_items_with_commas' => __( '形式 が複数ある場合はコンマで区切る', 'sage' ),
+        'add_or_remove_items' => __( '形式 を追加または削除', 'sage' ),
+        'choose_from_most_used' => __( '最もよく使われている形式から選択', 'sage' ),
+        'not_found' => __( 'No 形式 found', 'sage' ),
+        'no_terms' => __( 'No 形式', 'sage' ),
+        'items_list_navigation' => __( '形式 list navigation', 'sage' ),
+        'items_list' => __( '形式 list', 'sage' ),
     ];
 
     $args = [
-        "label" => __( "形式", "sage" ),
-        "labels" => $labels,
-        "public" => true,
-        "publicly_queryable" => true,
-        "hierarchical" => true,
-        "show_ui" => true,
-        "show_in_menu" => true,
-        "show_in_nav_menus" => true,
-        "query_var" => true,
-        "rewrite" => [ 'slug' => 'format', 'with_front' => true, ],
-        "show_admin_column" => true,
-        "show_in_rest" => true,
-        "rest_base" => "format",
-        "rest_controller_class" => "WP_REST_Terms_Controller",
-        "show_in_quick_edit" => true,
+        'label' => __( '形式', 'sage' ),
+        'labels' => $labels,
+        'public' => true,
+        'publicly_queryable' => true,
+        'hierarchical' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'show_in_nav_menus' => true,
+        'query_var' => true,
+        'rewrite' => [ 'slug' => 'format', 'with_front' => true, ],
+        'show_admin_column' => true,
+        'show_in_rest' => true,
+        'rest_base' => 'format',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
+        'show_in_quick_edit' => true,
         ];
-    register_taxonomy( "format", [ "music" ], $args );
+    register_taxonomy( 'format', [ 'music' ], $args );
 
 
     // create categories
@@ -309,101 +309,5 @@ add_action( 'init', function() {
             }
         }
     }
-});
+}, 20);
 
-add_action( 'init', function () {
-    acf_add_local_field_group(array(
-        'key' => 'group_5ea1e6fcea02a',
-        'title' => 'Live Info',
-        'fields' => array(
-            array(
-                'key' => 'field_5ea1e70c9777e',
-                'label' => '日付',
-                'name' => 'live_date',
-                'type' => 'date_picker',
-                'instructions' => '',
-                'required' => 1,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'display_format' => 'Y/m/d',
-                'return_format' => 'Y.n.j',
-                'first_day' => 1,
-            ),
-            array(
-                'key' => 'field_5ea1e72a9777f',
-                'label' => '場所',
-                'name' => 'live_at',
-                'type' => 'text',
-                'instructions' => '',
-                'required' => 1,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'default_value' => '',
-                'placeholder' => '場所',
-                'prepend' => '@',
-                'append' => '',
-                'maxlength' => '',
-            ),
-            array(
-                'key' => 'field_5ea1ea0be9d25',
-                'label' => 'トップページに表示する？',
-                'name' => 'show_on_top',
-                'type' => 'true_false',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'message' => '',
-                'default_value' => 1,
-                'ui' => 1,
-                'ui_on_text' => '',
-                'ui_off_text' => '',
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'post_type',
-                    'operator' => '==',
-                    'value' => 'post',
-                ),
-                array(
-                    'param' => 'post_category',
-                    'operator' => '==',
-                    'value' => 'category:live',
-                ),
-            ),
-        ),
-        'menu_order' => 0,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
-    ));
-/**
- * Initialize ACF Builder
- */
-add_action('init', function () {
-    collect(glob(config('theme.dir').'/app/fields/*.php'))->map(function ($field) {
-        return require_once($field);
-    })->map(function ($field) {
-        if ($field instanceof FieldsBuilder) {
-            acf_add_local_field_group($field->build());
-        }
-    });
-});
