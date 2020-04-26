@@ -3,10 +3,8 @@
     <img src="@asset('images/logo_w.png')" alt="The eskargot miles" class="o-70">
   </div>
   <div class="tc">
-    <div class="m-auto pv3">
-      <a href="" class="dib w2 mh2 hover-white"><img src="@asset('images/icon/facebook_icon.png')" alt="facebook" class="o-70 glow"></a>
-      <a href="" class="dib w2 mh2 hover-white"><img src="@asset('images/icon/twitter_icon.png')" alt="twitter" class="o-70 glow"></a>
-      <a href="" class="dib w2 mh2 hover-white"><img src="@asset('images/icon/instagram_icon.png')" alt="instagram" class="o-70 glow"></a>
+    <div class="sns--footer">
+      @include('partials/sns_icons')
     </div>
   </div>
   <!-- <div class="container">

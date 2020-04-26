@@ -7,6 +7,9 @@
       @endif
     </nav> -->
   </div>
+  <div class="sns--main-top">
+    @include('partials/sns_icons')
+  </div>
   <div id="global--menu-button">
     <button class="hamburger hamburger--squeeze" type="button">
       <span class="hamburger-box">
@@ -41,9 +44,7 @@
             </a>
           </div>
           <div class="menu--item pt3">
-            <a href="" class="dib w2 w3-ns mh2 hover-white"><img src="@asset('images/icon/facebook_icon.png')" alt="facebook" class="o-70 glow"></a>
-            <a href="" class="dib w2 w3-ns mh2 hover-white"><img src="@asset('images/icon/twitter_icon.png')" alt="twitter" class="o-70 glow"></a>
-            <a href="" class="dib w2 w3-ns mh2 hover-white"><img src="@asset('images/icon/instagram_icon.png')" alt="instagram" class="o-70 glow"></a>
+            @include('partials/sns_icons')
           </div>
           <!-- <a class="f6 fw4 hover-white menu-hover no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a> -->
         </div>
@@ -56,18 +57,18 @@
         <div class="header--image-wrap">
           <!-- <a href="{{ home_url('/') }}" class="dib w2 h2 pa1 ba b--white-90 grow-large border-box"> -->
             <!-- <svg class="link white-90 hover-white" data-icon="skull" viewBox="0 0 32 32" style="fill:currentcolor"><title>skull icon</title><path d="M16 0 C6 0 2 4 2 14 L2 22 L6 24 L6 30 L26 30 L26 24 L30 22 L30 14 C30 4 26 0 16 0 M9 12 A4.5 4.5 0 0 1 9 21 A4.5 4.5 0 0 1 9 12 M23 12 A4.5 4.5 0 0 1 23 21 A4.5 4.5 0 0 1 23 12"></path></svg> -->
-            <img src="@asset('images/top_member.png')" alt="">
+            <!-- <img src="@asset('images/main_v.jpg')" alt=""> -->
           <!-- </a> -->
         </div>
         <div class="header--menu w-100 w-30-l tr">
           <div>
-            <a class="menu-hover no-underline white dib" href="/" >NEWS</a>
+            <a class="menu-hover no-underline white dib" href="#news" >NEWS</a>
           </div>
           <div>
-            <a class="menu-hover no-underline white dib" href="/" >LIVE INFO</a>
+            <a class="menu-hover no-underline white dib" href="#live" >LIVE INFO</a>
           </div>
           <div>
-            <a class="menu-hover no-underline white dib" href="/" >BIOGRAPHY</a>
+            <a class="menu-hover no-underline white dib" href="#biography" >BIOGRAPHY</a>
           </div>
           <div>
             <a class="menu-hover no-underline white dib" href="/" >DISCOGRAPHY</a>

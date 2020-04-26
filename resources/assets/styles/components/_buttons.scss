@@ -9,3 +9,45 @@
   padding-bottom: 0.5rem;
   margin: auto;
 }
+
+.sns-icon {
+  color: #fff;
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  width: 2rem;
+
+  @include mediaQuery-up(sm) {
+    width: 4rem;
+  }
+}
+
+.sns--main-top {
+  margin: 2rem;
+
+  .sns-icon {
+    width: 2rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+
+    @include mediaQuery-up(sm) {
+      width: 2rem;
+    }
+  }
+}
+
+.sns--footer {
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .sns-icon {
+    width: 2rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+
+    @include mediaQuery-up(sm) {
+      width: 2rem;
+    }
+  }
+}
