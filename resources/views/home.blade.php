@@ -4,7 +4,7 @@
 
   @php $post_collection = FrontPage::homePosts(); @endphp
   @foreach ($post_collection as $category => $posts)
-  <div class="wrap wrap--{{ $category }} pv5">
+  <div id="{{ $category }}" class="wrap wrap--{{ $category }} pv5">
   <div class="container br4 ph5 pv4">
     <div class="page-header mid-gray arial-black tracked-mega tc mw8">
       <h2 class="pv2">{{ strtoupper(get_category_by_slug($category)->name) }} <span class="mv2">{{ category_description(get_category_by_slug($category)->term_id) }}</span></h2>
@@ -23,7 +23,7 @@
 
   @php $bio_and_music = FrontPage::homeBioAndMusic(); @endphp
   @foreach ($bio_and_music as $category => $posts_category)
-  <div class="wrap wrap--{{ $category }} pv5">
+  <div id="{{ $category }}" class="wrap wrap--{{ $category }} pv5">
   <div class="container br4 ph5 pv4">
     <div class="page-header">
       <h2 class="pv2">{{ strtoupper($category) }} <span class="mv2">@if($category == 'biography') 略歴 @elseif ($category == 'discography') 作品 @else 動画 @endif</span></h2>

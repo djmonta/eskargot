@@ -1,7 +1,9 @@
 // TODO: .banner .nav li {}
 // TODO: .banner .nav a {}
 .banner {
-  background: $brand-primary;
+  background-image: image("main_v.jpg");
+  background-position: center bottom;
+  background-size: cover;
   height: 100vh;
 
   @include mediaQuery-up(sm) {
@@ -9,7 +11,6 @@
   }
 
   .bg-container {
-    background: image("banner_bg.png") no-repeat $brand-primary;
     width: 100%;
     max-width: 1140px;
     margin: 0 auto;
