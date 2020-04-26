@@ -1,3 +1,3 @@
-<div class="page-header mid-gray arial-black tracked-mega pt5 tc">
+<div class="page-header tracked-mega pt5">
   <h1>{!! App::title() !!}</h1>
 </div>

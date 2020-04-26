@@ -3,5 +3,5 @@
     @include('partials/eye-catch')
     @include('partials/entry-meta-live')
   </header>
-  <div>{{ the_excerpt() }}</div>
+  <div class="entry-excerpt">{{ the_excerpt() }}</div>
 </article>
