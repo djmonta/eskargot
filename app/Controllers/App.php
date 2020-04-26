@@ -35,4 +35,15 @@ class App extends Controller
     {
         return get_the_category($post_id)[0]->slug;
     }
+
+    public static function getFirstoEmbed($post_id)
+    {
+        $meta = get_post_custom($post_id);
+
+        foreach ($meta as $key => $value) {
+            if (strpos($key, 'oembed') !== false)
+                return $value[0];
+
+        }
+    }
 }
