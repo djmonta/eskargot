@@ -2,9 +2,15 @@
 .container {
   max-width: 100%;
   margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
-  @include mediaQuery-up(md) {
+  @include mediaQuery-up(sm) {
     max-width: 80rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   .section-contents,
@@ -15,8 +21,24 @@
 
   .section-contents {
     max-width: 64rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+
+    @include mediaQuery-up(sm) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  .more-container {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    @include mediaQuery-up(sm) {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
   }
 }
 
@@ -26,8 +48,10 @@
   // height: 50vh; //仮
 
   .section-contents {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    @include mediaQuery-up(sm) {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
   }
 }
 
@@ -41,16 +65,41 @@
     color: $brand-primary;
   }
 
+  article {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    @include mediaQuery-up(sm) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
   .entry-title {
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+
+    @include mediaQuery-up(sm) {
+      margin-top: 2rem;
+    }
   }
 
   .thumbnail {
-    padding-left: 4rem;
-    padding-right: 4rem;
+    @include mediaQuery-up(sm) {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
 
     img {
       display: block;
+    }
+  }
+
+  p.b {
+    margin-top: 0.25rem;
+
+    @include mediaQuery-up(sm) {
+      margin-top: 1rem;
     }
   }
 
@@ -65,6 +114,33 @@
   p {
     font-size: 0.875rem;
   }
+
+  article {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .entry-header {
+    width: 100%;
+
+    @include mediaQuery-up(sm) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 50%;
+    }
+  }
+
+  .entry-content {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 100%;
+
+    @include mediaQuery-up(sm) {
+      padding-left: 2rem;
+      width: 50%;
+    }
+  }
 }
 
 .wrap--discography {
@@ -74,6 +150,14 @@
     margin-top: 0;
     margin-bottom: 2rem;
     text-align: center;
+  }
+
+  article {
+    width: 50%;
+
+    @include mediaQuery-up(sm) {
+      width: 25%;
+    }
   }
 
   .entry-title {

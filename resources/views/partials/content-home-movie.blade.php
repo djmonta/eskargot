@@ -1,4 +1,4 @@
-<article @php post_class('fl w-50 ph3') @endphp>
+<article @php post_class('w-100 w-50-l ph3') @endphp>
   {{ the_content() }}
   <h3 class="entry-title">{{ the_title() }}</h3>
   <p class="entry-excerpt">

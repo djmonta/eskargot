@@ -1,4 +1,4 @@
-<article @php post_class('fl w-25 ph3') @endphp>
+<article @php post_class('ph2 ph3-l') @endphp>
   <header>
     @include('partials/eye-catch')
   </header>

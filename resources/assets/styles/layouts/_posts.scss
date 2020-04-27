@@ -1,9 +1,19 @@
 .wrap {
   background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include mediaQuery-up(sm) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .container {
   background: rgba($color: #fff, $alpha: 0.64);
+  width: 90%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   h2 {
     color: $brand-primary;
@@ -15,13 +25,15 @@
 
     &::after {
       content: "";
-      height: 20px;
+      height: 15px;
       display: block;
-      background: asset("images", "h2_border.svg") no-repeat;
+      background: asset("images", "h2_border-m.svg") no-repeat;
       background-size: contain;
 
       @include mediaQuery-up(lg) {
+        background: asset("images", "h2_border.svg") no-repeat;
         background-size: contain;
+        height: 20px;
       }
     }
 
