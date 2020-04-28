@@ -29,6 +29,7 @@ class FrontPage extends Controller
     {
         $args = [
             'post_type' => array('page', 'music'),
+            'nopaging'  => true,
         ];
 
         $bio_and_music_query = new \WP_Query( $args );
