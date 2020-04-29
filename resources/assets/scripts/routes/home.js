@@ -2,17 +2,11 @@ export default {
   init() {
     // JavaScript to be fired on the home page
     $('.slider').slick(sliderOptions);
-
     $(window).load(function() {
-      let footerHeight = $('footer').height();
-      let pbMovie = footerHeight + 64;
-      let movieOffset = $('.wrap--movie').offset();
-      let movieHeight = $('.wrap--movie').height();
-      $('.wrap--movie').css('padding-bottom', pbMovie + 'px');
-
-      let footerTop = parseInt(movieOffset.top) + movieHeight + 64*2;
-      $('footer').css('top', footerTop);
+      footerPosition;
+      $(window).trigger('resize');
     });
+    $(window).resize(footerPosition);
   },
   finalize() {
     // JavaScript to be fired on the home page, after the init JS
@@ -53,4 +47,15 @@ const sliderOptions = {
     // settings: "unslick"
     // instead of a settings object
   ],
+};
+
+const footerPosition = function() {
+  let footerHeight = $('footer').height();
+  let pbMovie = footerHeight + 64;
+  let movieOffset = $('.wrap--movie').offset();
+  let movieHeight = $('.wrap--movie').height();
+  $('.wrap--movie').css('padding-bottom', pbMovie + 'px');
+
+  let footerTop = parseInt(movieOffset.top) + movieHeight + 64*2;
+  $('footer').css('top', footerTop);
 };
