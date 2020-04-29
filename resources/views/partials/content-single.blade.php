@@ -2,7 +2,13 @@
   <article @php post_class() @endphp>
     <header>
       <h1 class="entry-title">{!! get_the_title() !!}</h1>
-      @include('partials/entry-meta')
+      @php $cat = App::getPostCategorySlug(get_the_ID()) @endphp
+      @if ($cat == 'live')
+        @include('partials/entry-meta-live')
+      @else
+        @include('partials/entry-meta')
+      @endif
+      @include('partials/eye-catch')
     </header>
     <div class="entry-content">
       @php the_content() @endphp
