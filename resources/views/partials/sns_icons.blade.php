@@ -1,4 +1,4 @@
-<a href="//www.facebook.com/theeskargotmiles" rel="nofollow" target="_blank" class="sns-icon hover-white"><img src="@asset('images/icon/facebook_icon.png')" alt="facebook" class="o-70 glow"></a>
-<a href="twitter.com/eskargotmiles" rel="nofollow" target="_blank" class="sns-icon hover-white"><img src="@asset('images/icon/twitter_icon.png')" alt="twitter" class="o-70 glow"></a>
-<a href="//instagram.com/eskargotmiles" rel="nofollow" target="_blank" class="sns-icon hover-white"><img src="@asset('images/icon/instagram_icon.png')" alt="instagram" class="o-70 glow"></a>
-<a href="//www.youtube.com/user/Theeskargotmiles/" rel="nofollow" target="_blank" class="sns-icon hover-white"><img src="@asset('images/icon/youtube_icon.png')" alt="YouTube" class="o-70 glow"></a>
+<a href="@if(!empty(get_option('facebook'))){{ get_option('facebook') }}@endif" rel="nofollow" target="_blank" class="sns-icon hover-white"><img src="@asset('images/icon/facebook_icon.png')" alt="facebook" class="o-70 glow"></a>
+<a href="@if(!empty(get_option('twitter'))){{ get_option('twitter') }}@endif" rel="nofollow" target="_blank" class="sns-icon hover-white"><img src="@asset('images/icon/twitter_icon.png')" alt="twitter" class="o-70 glow"></a>
+<a href="@if(!empty(get_option('instagram'))){{ get_option('instagram') }}@endif" rel="nofollow" target="_blank" class="sns-icon hover-white"><img src="@asset('images/icon/instagram_icon.png')" alt="instagram" class="o-70 glow"></a>
+<a href="@if(!empty(get_option('youtube'))){{ get_option('youtube') }}@endif" rel="nofollow" target="_blank" class="sns-icon hover-white"><img src="@asset('images/icon/youtube_icon.png')" alt="YouTube" class="o-70 glow"></a>

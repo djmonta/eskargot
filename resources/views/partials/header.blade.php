@@ -34,7 +34,7 @@
             </a>
           </div>
           <div class="menu--item">
-            <a class="hover-white no-underline white-70" href="/" >
+            <a class="hover-white no-underline white-70" href="@if(!empty(get_option('goods'))){{ get_option('goods') }}@endif" rel="nofollow" target="_blank">
               <span class="arial-black f2 fw4">GOODS</span><br>グッズ
             </a>
           </div>

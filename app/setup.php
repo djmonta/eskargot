@@ -317,3 +317,18 @@ add_action( 'init', function() {
     }
 }, 20);
 
+add_action('admin_menu', function() {
+    add_theme_page( 'テーマ設定', 'テーマ設定', 'edit_themes','theme_option', function() {
+        require_once ( get_template_directory() . '/views/theme-options.php' );
+    } );
+});
+add_action('admin_init', function() {
+    register_setting( 'eskargot-option-group', 'facebook' );
+    register_setting( 'eskargot-option-group', 'twitter' );
+    register_setting( 'eskargot-option-group', 'instagram' );
+    register_setting( 'eskargot-option-group', 'youtube' );
+    register_setting( 'eskargot-option-group', 'goods' );
+} );
+
+function theme_option_file(){
+}
