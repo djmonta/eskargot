@@ -17,7 +17,7 @@
       </span>
     </button>
   </div>
-  <div class="relative w-100 h-100">
+  <div class="relative w-100">
     <div id="gnavi" class="menu--overlay w-100 flex items-center justify-center w-100 dn">
         <div class="v-mid tc">
           <div class="menu--item pa3">
