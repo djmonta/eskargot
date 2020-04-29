@@ -13,7 +13,7 @@
       <div class="@if ($category == 'news') slider @else flex @endif">
       @foreach ($posts as $key => $a_post) @php global $post; $post = $a_post; @endphp
         <div class="w-50-l @if ($category == 'live' && $key > 0) dn db-l @else w-100 @endif">
-        @include('partials.content-home-' . $category)
+        @include('partials.content-' . $category)
         </div>
       @endforeach
       </div>
