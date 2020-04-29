@@ -16,7 +16,7 @@ class FrontPage extends Controller
             $cat = App::getPostCategorySlug(get_the_ID());
             if ($cat == 'live') {
                 if (count($category_posts['live']) > 2) continue;
-                if (empty(get_field('show_on_top', false, false))) continue;
+                // if (empty(get_field('show_on_top', false, false))) continue;
             }
 
             $category_posts[$cat][] = $post;

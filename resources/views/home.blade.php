@@ -12,7 +12,7 @@
     <div class="section-contents {{ $category }}">
       <div class="@if ($category == 'news') slider @else flex @endif">
       @foreach ($posts as $key => $a_post) @php global $post; $post = $a_post; @endphp
-        <div class="w-50-l @if ($category == 'live' && $key > 0) dn db-l @else w-100 @endif">
+        <div class="w-50-l @if ($category == 'live' && empty(get_field('show_on_top', false, false)) ) dn db-l @else w-100 @endif">
         @include('partials.content-' . $category)
         </div>
       @endforeach
