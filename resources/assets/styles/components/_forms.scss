@@ -3,3 +3,52 @@
 // TODO: .search-form label {}
 // TODO: .search-form .search-field {}
 // TODO: .search-form .search-submit {}
+.contact h1 {
+  text-align: center;
+}
+
+.wpcf7-form {
+  width: 100%;
+
+  @include mediaQuery-up(sm) {
+    max-width: 50rem;
+    margin: 2rem auto;
+  }
+
+  label,
+  input,
+  textarea {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  input[type="submit"] {
+    border-style: solid;
+    border-width: 1px;
+    background: #fff;
+    border-color: $brand-primary;
+    color: $brand-primary;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $brand-primary;
+      color: #fff;
+      transition: background-color 0.15s ease-in-out;
+    }
+
+    @include mediaQuery-up(sm) {
+      width: 20rem;
+      margin: 2rem auto;
+    }
+  }
+}
