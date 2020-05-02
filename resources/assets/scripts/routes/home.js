@@ -50,12 +50,21 @@ const sliderOptions = {
 };
 
 const footerPosition = function() {
+
+  let padding = 64;
+  if ($(window).innerWidth() < 768) {
+    padding = 32;
+  }
+
   let footerHeight = $('footer').height();
-  let pbMovie = footerHeight + 64;
+
+  let pbMovie = footerHeight + padding;
   let movieOffset = $('.wrap--movie').offset();
   let movieHeight = $('.wrap--movie').height();
   $('.wrap--movie').css('padding-bottom', pbMovie + 'px');
 
-  let footerTop = parseInt(movieOffset.top) + movieHeight + 64*2;
+  let footerTop = parseInt(movieOffset.top) + movieHeight + padding * 2;
   $('footer').css('top', footerTop);
+  $('footer').css('opacity', 1);
+  $('footer').fadeIn();
 };

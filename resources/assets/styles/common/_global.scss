@@ -5,12 +5,21 @@
   src: font("marker_felt_thin.woff") format("woff"), font("marker_felt_thin.ttf") format("truetype");
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
+html {
+  overflow: auto;
+  height: 100%;
+}
+
 .arial-black {
-  font-family: "Arial Black", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  position: relative;
+  height: 100%;
 }
 
 ul,

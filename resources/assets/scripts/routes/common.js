@@ -1,13 +1,15 @@
 export default {
   init() {
+    let toggleClassArray = ['.sns--main-top', '.header--content', '.bg-container', '.menu--overlay'];
+
     // JavaScript to be fired on all pages
     $('.hamburger').click(function() {
       $(this).toggleClass('is-active');
-      $('.sns--main-top').toggleClass('dn');
-      $('.header--content').toggleClass('dn');
-      $('.bg-container').toggleClass('dn');
       $('.banner').toggleClass('menu-open');
-      $('.menu--overlay').toggleClass('dn');
+      $('body').toggleClass('overflow-y-hidden');
+      toggleClassArray.forEach(function(item) {
+        $(item).toggleClass('dn');
+      });
     });
 
   },

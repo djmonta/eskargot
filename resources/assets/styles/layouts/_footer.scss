@@ -33,7 +33,7 @@ footer {
         a {
           color: white;
           opacity: 0.7;
-          font-family: "Arial Black", sans-serif;
+          font-family: "Montserrat", sans-serif;
           text-decoration: none;
 
           &:hover {
@@ -48,6 +48,7 @@ footer {
 .home footer {
   background: rgba(243, 86, 78, 0.7);
   position: absolute;
+  opacity: 0;
   top: 0;
   width: 100%;
 }
