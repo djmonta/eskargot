@@ -1,25 +1,7 @@
 // TODO: .banner .nav li {}
 // TODO: .banner .nav a {}
 .banner {
-  background-image: image("main_v.jpg");
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
-
-  @include mediaQuery-up(lg) {
-    background-position: center top;
-    background-size: contain;
-    height: auto;
-    transition: all 0.1s ease 0s;
-  }
-
-  @include mediaQuery-down(md) {
-    background-image: image("main_v-m.jpg");
-    background-attachment: initial;
-    align-content: flex-start;
-  }
+  background-color: $brand-primary;
 
   .bg-container {
     width: 100%;
@@ -36,17 +18,28 @@
 
   &.menu-open {
     background: none $brand-primary;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
     z-index: 1;
-  }
 
-  .header--content {
-    min-height: 550px;
-    height: 41vh;
+    @include mediaQuery-down(lg) {
+      flex-wrap: nowrap;
+    }
+
+    #global--menu-button {
+      width: 100%;
+      padding-top: 0;
+
+      @include mediaQuery-up(lg) {
+        padding: 2.5vh;
+        padding-top: 2.5rem;
+      }
+    }
   }
 
   .header--image-wrap {

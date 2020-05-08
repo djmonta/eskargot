@@ -18,12 +18,28 @@
   width: 2rem;
 
   @include mediaQuery-up(sm) {
+    width: 3rem;
+  }
+
+  @include mediaQuery-up(lg) {
     width: 4rem;
   }
 }
 
 .sns--main-top {
-  margin: 2rem;
+  // margin: 3vh;
+  display: none;
+
+  @include mediaQuery-up(lg) {
+    margin: 2.5vh;
+    display: block;
+  }
+
+  &.dn {
+    @include mediaQuery-up(sm) {
+      display: none;
+    }
+  }
 
   .sns-icon {
     width: 2rem;
@@ -46,7 +62,7 @@
     margin-left: 0.25rem;
     margin-right: 0.25rem;
 
-    @include mediaQuery-up(sm) {
+    @include mediaQuery-up(lg) {
       width: 2rem;
     }
   }

@@ -44,6 +44,71 @@
 }
 
 .home {
+  .banner--home {
+    background-image: image("main_v.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    @include mediaQuery-up(lg) {
+      background-position: center top;
+      background-size: contain;
+      transition: all 0.1s ease 0s;
+      height: 45vw;
+    }
+
+    @include mediaQuery-down(md) {
+      background-image: image("main_v-m.jpg");
+      background-attachment: initial;
+      align-content: flex-start;
+    }
+
+    &.menu-open {
+      background: none $brand-primary;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      @include mediaQuery-up(md) {
+        align-items: flex-start;
+        height: 100vh;
+      }
+    }
+
+    .header--content {
+      min-height: 550px;
+      height: 50vh;
+    }
+  }
+
+  #global--menu-button {
+    @include mediaQuery-down(md) {
+      padding-top: 1.5rem;
+
+      .hamburger.is-active {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .sns--main-top {
+    display: block;
+    padding: 2.5vh;
+
+    @include mediaQuery-up(lg) {
+      padding: 0;
+    }
+
+    &.dn {
+      display: none;
+    }
+  }
+
+  .relative {
+    min-height: 85vh;
+  }
+
   h2 {
     color: $brand-primary;
     font-family: "Montserrat", sans-serif;
