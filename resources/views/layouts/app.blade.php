@@ -3,7 +3,11 @@
   @include('partials.head')
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
-    @include('partials.header')
+    @if (is_home())
+      @include('partials.header-home')
+    @else
+      @include('partials.header')
+    @endif
       <div class="content">
         <main class="main min-vh-100" role="document">
           @yield('content')

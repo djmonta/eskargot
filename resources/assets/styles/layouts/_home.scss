@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  border-radius: 0.5rem;
 
   @include mediaQuery-up(sm) {
     max-width: 80rem;

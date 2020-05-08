@@ -5,7 +5,7 @@
   @php $post_collection = FrontPage::homePosts(); @endphp
   @foreach ($post_collection as $category => $posts)
   <div id="{{ $category }}" class="wrap wrap--{{ $category }}">
-  <div class="container br4">
+  <div class="container">
     <div class="page-header">
       <h2 class="pv2">{{ strtoupper(get_category_by_slug($category)->name) }} <span>{{ category_description(get_category_by_slug($category)->term_id) }}</span></h2>
     </div>
@@ -29,7 +29,7 @@
   @php global $wp_query; @endphp
   @foreach ($bio_and_music as $category => $posts_category)
   <div id="{{ $category }}" class="wrap wrap--{{ $category }}">
-  <div class="container br4">
+  <div class="container">
     <div class="page-header">
       <h2 class="pv2">{{ strtoupper($category) }} <span class="mv2">@if($category == 'biography') 略歴 @elseif ($category == 'discography') 作品 @else 動画 @endif</span></h2>
     </div>
