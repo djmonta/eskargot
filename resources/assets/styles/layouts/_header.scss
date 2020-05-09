@@ -16,10 +16,24 @@
     }
   }
 
+  .relative {
+    width: 70%;
+
+    @include mediaQuery-up(sm) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @include mediaQuery-up(lg) {
+      width: 50%;
+    }
+  }
+
   &.menu-open {
     background: none $brand-primary;
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    flex-wrap: wrap-reverse;
     position: fixed;
     top: 0;
     left: 0;
@@ -27,17 +41,17 @@
     height: 100vh;
     z-index: 1;
 
-    @include mediaQuery-down(lg) {
-      flex-wrap: nowrap;
+    .relative {
+      margin-right: auto;
+      margin-left: auto;
     }
 
     #global--menu-button {
       width: 100%;
-      padding-top: 0;
+      padding-bottom: 0;
 
-      @include mediaQuery-up(lg) {
-        padding: 2.5vh;
-        padding-top: 2.5rem;
+      @include mediaQuery-down(lg) {
+        padding-top: 1.5rem;
       }
     }
   }

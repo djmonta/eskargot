@@ -2,10 +2,10 @@
   <div class="sns--main-top w-20">
     @include('partials/sns_icons')
   </div>
-  <div class="relative w-70 w-50-m w-50-l">
-    <div id="gnavi" class="menu--overlay w-100 w-80-l center-l flex items-center justify-center dn">
+  <div class="relative">
+    <div id="gnavi" class="menu--overlay w-100 w-70-ns center-ns flex items-center justify-center dn">
         <div class="v-mid tc">
-          <div class="menu--item pa3 ph4-m ph5-l">
+          <div class="menu--item logo">
             <img src="@asset('images/logo_w.png')" alt="" class="o-70 w-90 w-100-ns">
           </div>
           <div class="menu--item">
@@ -28,12 +28,12 @@
               <span class="arial-black f2 fw4">CONTACT</span><br>お問い合わせ
             </a>
           </div>
-          <div class="menu--item pt3">
+          <div class="menu--item sns">
             @include('partials/sns_icons')
           </div>
         </div>
     </div>
-    <div class="header--content pa3">
+    <div class="header--content pa2 pa0-l">
       <div class="header--image-space">
 
       </div>

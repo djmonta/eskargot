@@ -9,7 +9,7 @@
       @include('partials.header')
     @endif
       <div class="content">
-        <main class="main min-vh-100" role="document">
+        <main class="main" role="document">
           @yield('content')
         </main>
         @if (App\display_sidebar())

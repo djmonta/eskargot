@@ -17,20 +17,15 @@
   margin-right: 0.5rem;
   width: 2rem;
 
-  @include mediaQuery-up(sm) {
-    width: 3rem;
-  }
-
   @include mediaQuery-up(lg) {
-    width: 4rem;
+    width: 3rem;
   }
 }
 
 .sns--main-top {
-  // margin: 3vh;
   display: none;
 
-  @include mediaQuery-up(lg) {
+  @include mediaQuery-up(md) {
     margin: 2.5vh;
     display: block;
   }

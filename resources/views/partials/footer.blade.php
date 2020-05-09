@@ -1,5 +1,5 @@
 <footer class="content-info">
-  <div class="footer--logo mw6 tc">
+  <div class="footer--logo tc">
     <img src="@asset('images/logo_w.png')" alt="The eskargot miles" class="o-70">
   </div>
   <div class="tc">

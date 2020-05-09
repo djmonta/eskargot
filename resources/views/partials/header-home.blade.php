@@ -1,20 +1,20 @@
 <header class="banner banner--home flex flex-wrap justify-between">
   <div class="bg-container absolute contain">
   </div>
-  <div class="sns--main-top w-70 w-30-l w-40-m">
+  <div class="sns--main-top w-70 w-40-ns">
     @include('partials/sns_icons')
   </div>
-  <div id="global--menu-button" class="w-30 w-60-l tr">
+  <div id="global--menu-button" class="w-30 w-50-ns tr">
     <button class="hamburger hamburger--squeeze" type="button">
       <span class="hamburger-box">
         <span class="hamburger-inner"></span>
       </span>
     </button>
   </div>
-  <div class="relative w-100 w-70-l center-l">
-    <div id="gnavi" class="menu--overlay w-80 center flex justify-center dn">
+  <div class="relative">
+    <div id="gnavi" class="menu--overlay w-100 w-70-ns center-ns flex justify-center dn">
         <div class="v-mid tc">
-          <div class="menu--item pa3 ph4 ph5-l">
+          <div class="menu--item logo">
             <img src="@asset('images/logo_w.png')" alt="" class="o-70 w-90 w-100-ns">
           </div>
           <div class="menu--item">
@@ -37,10 +37,9 @@
               <span class="arial-black f2 fw4">CONTACT</span><br>お問い合わせ
             </a>
           </div>
-          <div class="menu--item pt3">
+          <div class="menu--item sns">
             @include('partials/sns_icons')
           </div>
-          <!-- <a class="f6 fw4 hover-white menu-hover no-underline white-70 dib ml2 pv2 ph3 ba" href="/" >Sign Up</a> -->
         </div>
     </div>
     <div class="header--content tc">

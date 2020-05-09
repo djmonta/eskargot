@@ -1,17 +1,10 @@
 #global--menu-button {
-  // margin-left: auto;
   margin-right: 0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 
   @include mediaQuery-up(sm) {
     padding: 2.5vh;
-  }
-
-  @include mediaQuery-down(md) {
-    .hamburger.is-active {
-      padding-top: 1.5rem;
-    }
   }
 }
 
@@ -25,9 +18,25 @@
   .arial-black {
     font-size: 1.75rem;
 
-    @include mediaQuery-up(sm) {
+    @include mediaQuery-up(md) {
       font-size: 2.25rem;
     }
+  }
+
+  &.logo {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 5vh;
+
+    @include mediaQuery-up(sm) {
+      padding-left: 7vw;
+      padding-right: 7vw;
+    }
+  }
+
+  &.sns {
+    padding-top: 1.5vh;
+    margin-bottom: 7vh;
   }
 }
 
